@@ -1,3 +1,4 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,6 +23,14 @@
     border: 0 none;
     margin-top: 5px;
     width: 252px;
+  }
+  .outofstock {
+  	background-color: red;
+  	pointer-events: none;
+   	cursor: default;
+  }
+  a.outofstock {
+   color: white;
   }
 	
 	/* Custom container */
@@ -95,28 +104,24 @@
 		</p>
 		
 		<div>
-			
-			<div class="preview">
-				<a href="antarctica">
-					Antarctica<br>
-					<img src="static/images/penguin.jpg" class="thumb">
+			<c:forEach var="print" items="${prints}">
+			 <c:choose>
+				<c:when test"${print.quan < 1}">
+					<div class="preview outofstock">
+					<a href="printdisp?id=${print.id}" class="outofstock">
+					${print.title} - <i><small>(out of stock)</small></i><br>
+				</c:when>
+			<c:otherwise>
+				<div class="preview">
+					<a href="printdisp?id=${print.id}">
+					${print.title}<br>
+			</c:otherwise>
+			</c:choose>
+					<img src="static/images/${print.imgsrc}" class="thumb">
 				</a>
 			</div>
+			</c:forEach>
 			
-			<div class="preview">
-				<a href="alaska">
-					Alaska<br>
-					<img src="static/images/alaska.jpg" class="thumb">
-				</a>
-			</div>
-			
-			<div class="preview">
-				<a href="australia">
-					Australia<br>
-					<img src="static/images/sydney.jpg" class="thumb">
-				</a>
-			</div>
-		
 		</div> 
 		<p style="clear:both"></p>
   

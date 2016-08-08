@@ -1,7 +1,8 @@
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>${myapp.title} </title>
+	<title> ${myapp.title} </title>
 	<meta charset="utf8">  
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
@@ -52,13 +53,12 @@
   <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          
-        <a class="brand pull-left" href="/home"><em>${myapp.title} </em></a>
-	  
-          <div class="nav-collapse collapse">
-           
-          </div><!--/.nav-collapse -->
-        </div>
+      <a class="brand pull-left" href="/home"><em>${myapp.title} </em></a>
+      
+      
+		<div class="nav-collapse collapse">
+		</div>
+	  </div>
       </div>
     </div>  <!-- end of div for nav bar-->
   
@@ -67,26 +67,28 @@
   <tr> -->
   <div class="hero-unit">
   <div>
-  <h2><em>Australia</em></h2> </div>
+  <h2><em>${print.title}</em></h2> </div>
   <br/>
   
-		<img src="static/images/sydney.jpg" class="sale-photo">
+		<img src="static/images/${print.imgsrc}" class="sale-photo">
 	
 		<h3>
 			About this landscape:
 		</h3>
 	
 		<div id="description">
-			This photo is another one of Lauren's favorites!  Her husband took these photos of the Sydney Opera House in 2011.
+			${print.description}
 		</div>
 		
 		<h3>
-			Price: 
+			Price:
 		</h3>
 		
-		<div id="price">130.00</div>
-
+		<div id="price">
+		  <fmt:formatNumber value="${print.price}" type="currency"/>
+		</div>
   
+
 
  
   </div> <!-- end of the hero-unit-->

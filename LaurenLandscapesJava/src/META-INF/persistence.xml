@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.0"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">	
+          <persistence-unit name="LaurenLandscapesJava" transaction-type="RESOURCE_LOCAL">
+		<class>com.ibm.devworks.examples.java.lll.Print</class>
+		<validation-mode>NONE</validation-mode>
+		<properties>
+			<property name="eclipselink.ddl-generation.output-mode" value="both"/>
+        <property name="javax.persistence.jdbc.url" value="mongodb://7a4488b9-7a5c-4394-a74c-6c78f446f698:525cea24-6cc8-4322-9556-e11d79a0fc87@23.246.199.73:10259/db"/>
+        <property name="javax.persistence.jdbc.user" value="7a4488b9-7a5c-4394-a74c-6c78f446f698"/>
+        <property name="javax.persistence.jdbc.password" value="525cea24-6cc8-4322-9556-e11d79a0fc87"/>
+        <property name="javax.persistence.jdbc.driver" value="com.ibm.db2.jcc.DB2Driver"/>
+    </properties>
+			
+
+	</persistence-unit>
+</persistence>
