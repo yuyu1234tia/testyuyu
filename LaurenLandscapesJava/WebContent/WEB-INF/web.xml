@@ -7,4 +7,28 @@
 	<welcome-file-list>
 		<welcome-file>home</welcome-file>
 	</welcome-file-list>
+	<servlet>
+    	<servlet-name>DispatchServlet</servlet-name>
+    	<servlet-class>com.ibm.devworks.examples.java.lll.DispatchServlet</servlet-class>
+    </servlet>
+  	<servlet-mapping>
+    	<servlet-name>DispatchServlet</servlet-name>
+   		<url-pattern>/home</url-pattern>
+  	</servlet-mapping>  
+  	<servlet-mapping>
+    	<servlet-name>DispatchServlet</servlet-name>
+   		<url-pattern>/antarctica</url-pattern>
+  	</servlet-mapping>  
+  	<servlet-mapping>
+    	<servlet-name>DispatchServlet</servlet-name>
+   		<url-pattern>/alaska</url-pattern>
+  	</servlet-mapping>  
+  	<servlet-mapping>
+    	<servlet-name>DispatchServlet</servlet-name>
+   		<url-pattern>/arctic</url-pattern>
+  	</servlet-mapping>  
+  	<servlet-mapping>
+    	<servlet-name>DispatchServlet</servlet-name>
+   		<url-pattern>/australia</url-pattern>
+  	</servlet-mapping>  
 </web-app>

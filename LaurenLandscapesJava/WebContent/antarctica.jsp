@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> ${myapp.title} </title>
+	<title>${myapp.title} </title>
 	<meta charset="utf8">  
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
@@ -14,15 +14,6 @@
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 	
       }
-  .preview {
-  	float: left;
-	margin-right: 20px;
-  }    
-  .preview .thumb {
-    border: 0 none;
-    margin-top: 5px;
-    width: 252px;
-  }
 	
 	/* Custom container */
       .container-narrow {
@@ -52,7 +43,6 @@
           padding-left: 5px;
           padding-right: 5px;
         }
-       
 	
   </style>
 
@@ -63,7 +53,7 @@
       <div class="navbar-inner">
         <div class="container">
           
-          <a class="brand pull-left" href="/home"><em>${myapp.title} </em></a>
+        <a class="brand pull-left" href="/home"><em>${myapp.title} </em></a>
 	  
           <div class="nav-collapse collapse">
            
@@ -77,48 +67,25 @@
   <tr> -->
   <div class="hero-unit">
   <div>
-  <h2 class="text-center"><em>${myapp.title}</em></h2> </div>
+  <h2><em>Antarctica</em></h2> </div>
   <br/>
   
- 		<p>
+		<img src="static/images/penguin.jpg" class="sale-photo">
+	
+		<h3>
+			About this landscape:
+		</h3>
+	
+		<div id="description">
+			Lauren's husband took this spectacular photo when they visited Antarctica in December of 2012.  This is one of our hot sellers, so it rarely goes on sale.
+		</div>
 		
-			Lauren's Lovely Landscapes is a collection of some of her favorite landscapes.  
-			If you would like to purchase a print, please <a href="mailto:lauren@example.com">
-			e-mail Lauren</a> with the name	of the print.
-			
-		</p>
+		<h3>
+			Price: 
+		</h3>
 		
-		<p>
-			
-			Please check back often to see if we have sales!
-			
-		</p>
-		
-		<div>
-			
-			<div class="preview">
-				<a href="antarctica">
-					Antarctica<br>
-					<img src="static/images/penguin.jpg" class="thumb">
-				</a>
-			</div>
-			
-			<div class="preview">
-				<a href="alaska">
-					Alaska<br>
-					<img src="static/images/alaska.jpg" class="thumb">
-				</a>
-			</div>
-			
-			<div class="preview">
-				<a href="australia">
-					Australia<br>
-					<img src="static/images/sydney.jpg" class="thumb">
-				</a>
-			</div>
-		
-		</div> 
-		<p style="clear:both"></p>
+		<div id="price">100.00</div>
+
   
 
  

@@ -11,7 +11,7 @@ import org.junit.Test;
  * @author sam
  *
  */
-public class testWebsiteTitle {
+public class TestWebsiteTitle {
 
 	/**
 	 * Test method for {@link com.ibm.devworks.examples.java.lll.WebsiteTitle#getTitle()}.
